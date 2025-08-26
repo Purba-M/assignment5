@@ -2,3 +2,12 @@
 body {
   font-family: 'Hind Madurai', sans-serif;
 }
+
+.hero-bg {
+  background: linear-gradient(
+    90deg, 
+    rgba(1.25,49.64,34.60,1), 
+    rgba(0,103,71,1) 50%, 
+    rgba(1,50,35,1) 100%
+  );
+}
