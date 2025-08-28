@@ -21,12 +21,12 @@
         </div>
         <div class=" flex gap-2 md:gap-3 ">
            <div class=" flex justify-between items-center h-10 w-20 rounded-[20px] p-4 bg-[#41ff6b1a] ">
-            <span class="font-bold">0</span>
-            <span class=""><img src="assets/heart.png" class="h-[25px] w-[25px]"></span>
+            <span id="heartCount" class="font-bold">0</span>
+            <span class=""><img src="assets/heart.png" class="h-[25px] w-[25px] heart"></span>
            </div>
            
            <div class=" flex justify-between items-center h-10 w-20 rounded-[20px] p-3.5 bg-[#41ff6b1a]">
-            <span class=" font-bold">100</span>
+            <span id="coinCount"class=" font-bold">100</span>
             <span class=""><img src="assets/coin.png" class=" h-[20px] w-[20px]"></span>
            </div>
 
@@ -48,10 +48,10 @@
     <!-- Card Section -->
      <div class="bg-emerald-50 min-h-screen grid grid-cols-1 lg:grid-cols-4 gap-8 p-10 ">
     <div class="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 justify-items-center">
-     <div class=" h-[280px] w-[350px] rounded-[10px] mt-[40px] p-5 bg-white shadow-lg">
+     <div class=" h-[280px] w-[350px] rounded-[10px] mt-[40px] p-5 bg-white shadow-lg card">
         <div class=" flex justify-between">
             <div class="bg-[#FFE3E2] rounded-[15px] h-[45px] w-[50px] flex items-center justify-center"><img src="assets/emergency.png" class="h-[24px] w-[24px] "></div>
-            <span class="text-[25px] mt-2">&#9825;</span>
+            <span class="text-[25px] mt-2 heart cursor-pointer">&#9825;</span>
         </div>
         <div class="mt-3">
             <h3 class="font-bold text-[18px]">National Emergency Number</h3>
@@ -64,7 +64,7 @@
             <button class="flex items-center justify-center gap-2 border rounded-lg h-[30px] w-[150px]">
             <i class="fa-solid fa-copy"></i> Copy
              </button>
-            <button class="flex items-center justify-center gap-2 border rounded-lg h-[30px] w-[150px] bg-[#00A63E] text-white">
+            <button class="callBtn flex items-center justify-center gap-2 border rounded-lg h-[30px] w-[150px] bg-[#00A63E] text-white">
             <i class="fa-solid fa-phone"></i> Call
             </button>
 
@@ -72,10 +72,10 @@
         </div>
      </div>
      <!-- Card 2 -->
-       <div class=" h-[280px] w-[350px] rounded-[10px] mt-[40px] p-5 bg-white shadow-lg">
+       <div class=" h-[280px] w-[350px] rounded-[10px] mt-[40px] p-5 bg-white shadow-lg  data-name="Fire Service Number" data-number="999"">
         <div class=" flex justify-between">
             <div class="bg-[#FFE3E2] rounded-[15px] h-[45px] w-[50px] flex items-center justify-center"><img src="assets/police.png" class="h-[24px] w-[24px] "></div>
-            <span class="text-[25px] mt-2">&#9825;</span>
+            <span class="text-[25px] mt-2 heart cursor-pointer">&#9825;</span>
         </div>
         <div class="mt-3">
             <h3 class="font-bold text-[18px]">Police Helpline Number</h3>
@@ -191,40 +191,84 @@
      
         </div>
         <!-- Right side -->
-         <div class="bg-white rounded-lg shadow-lg p-5 h-fit mt-[40px]">
+         <div class="bg-white rounded-lg shadow-lg p-5 h-full mt-[40px]">
             <div class="flex justify-between items-center mb-4">
                 <div class="flex justify-between items-center gap-20">
                     <span class="text-[20px]"><i class="fa-regular fa-clock"></i> Call History</span></div>
-                    <button class="bg-[#00A63E] h-[60px] w-[130px] rounded-[50px] text-white text-[18px]">Clear</button>
+                    <button id="clearHistory"class="bg-[#00A63E] h-[60px] w-[130px] rounded-[50px] text-white text-[18px]">Clear</button>
                 
             </div>
-            <div class=" space-y-3 gap-3">
-            <div class="bg-gray-100 rounded-lg p-3 flex justify-between items-center shadow-sm">
-                <div>
-                    <h3>Fire Service Number</h3>
-                    <p>999</p>
-                </div>
-                <p>11:36:58 AM</p>
-            </div>
-             <div class="bg-gray-100 rounded-lg p-3 flex justify-between items-center shadow-sm">
-                <div>
-                    <h3>Fire Service Number</h3>
-                    <p>999</p>
-                </div>
-                <p>11:36:58 AM</p>
-            </div>
-             <div class="bg-gray-100 rounded-lg p-3 flex justify-between items-center shadow-sm">
-                <div>
-                    <h3>Fire Service Number</h3>
-                    <p>999</p>
-                </div>
-                <p>11:36:58 AM</p>
+            <div id="historyList" class="space-y-3 gap-3">
             </div>
          </div>
          </div>
         
     </div>
-    
+     <script>
+     
+document.addEventListener("DOMContentLoaded", () => {
+  // Coins
+  let coins = 100;
+  const coinDisplay = document.getElementById("coinCount");
+
+  // Heart count
+  let heartCount = 0;
+  const heartDisplay = document.getElementById("heartCount");
+  document.querySelectorAll(".heart").forEach(heart => {
+    heart.addEventListener("click", () => {
+      heartCount++;
+      heartDisplay.textContent = heartCount;
+    });
+  });
+
+  // Call History elements
+  const historyList = document.querySelector("#historyList"); // make sure your history container has id="historyList"
+  const clearBtn = document.querySelector("#clearHistory"); // make sure your clear button has id="clearHistory"
+
+  // Call button functionality
+  document.querySelectorAll(".card").forEach(card => {
+    const callBtn = card.querySelector(".callBtn");
+    if (!callBtn) return; // skip cards without callBtn
+    const serviceName = card.querySelector("h3").textContent;
+    const serviceNumber = card.querySelector("p.font-bold").textContent;
+
+    callBtn.addEventListener("click", () => {
+      if (coins < 20) {
+        alert("Oops! Not enough coins 😅");
+        return;
+      }
+
+      coins -= 20;
+      coinDisplay.textContent = coins;
+
+      alert(`📞 Calling ${serviceName} (${serviceNumber})...`);
+
+      // Add to Call History
+      const now = new Date();
+      const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+
+      const historyItem = document.createElement("div");
+      historyItem.className = "bg-gray-100 rounded-lg p-3 flex justify-between items-center shadow-sm";
+      historyItem.innerHTML = `
+        <div>
+          <h3 class="font-bold">${serviceName}</h3>
+          <p>${serviceNumber}</p>
+        </div>
+        <p class="text-gray-600">${timeString}</p>
+      `;
+      historyList.prepend(historyItem); // newest call at top
+    });
+  });
+
+  // Clear history
+  clearBtn.addEventListener("click", () => {
+    historyList.innerHTML = "";
+  });
+});
+</script>
+
+
+ 
     
 </body>
 </html>
