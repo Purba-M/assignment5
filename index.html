@@ -22,7 +22,7 @@
         <div class=" flex gap-2 md:gap-3 ">
            <div class=" flex justify-between items-center h-10 w-20 rounded-[20px] p-4 bg-[#41ff6b1a] ">
             <span id="heartCount" class="font-bold">0</span>
-            <span class=""><img src="assets/heart.png" class="h-[25px] w-[25px] heart"></span>
+            <span><img src="assets/heart.png" class="h-[25px] w-[25px] heart"></span>
            </div>
            
            <div class=" flex justify-between items-center h-10 w-20 rounded-[20px] p-3.5 bg-[#41ff6b1a]">
@@ -31,7 +31,7 @@
            </div>
 
            <div class="flex items-center h-10 w-20 rounded-[20px] p-4 bg-[#00A63E]">
-            <span class=" font-[400] text-[14px] text-white">2 Copy</span>
+            <span class=" font-[400] text-[14px] text-white">0 Copy</span>
             
            </div>
         </div>
@@ -46,25 +46,25 @@
     </div>
 
     <!-- Card Section -->
-     <div class="bg-emerald-50 min-h-screen grid grid-cols-1 lg:grid-cols-4 gap-8 p-10 ">
-    <div class="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 justify-items-center">
+     <div class="bg-emerald-50 min-h-screen grid grid-cols-1 lg:grid-cols-[3fr_1fr] gap-8 p-10 ">
+    <div class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 justify-items-center">
      <div class=" h-[280px] w-[350px] rounded-[10px] mt-[40px] p-5 bg-white shadow-lg card">
         <div class=" flex justify-between">
             <div class="bg-[#FFE3E2] rounded-[15px] h-[45px] w-[50px] flex items-center justify-center"><img src="assets/emergency.png" class="h-[24px] w-[24px] "></div>
             <span class="text-[25px] mt-2 heart cursor-pointer">&#9825;</span>
         </div>
         <div class="mt-3">
-            <h3 class="font-bold text-[18px]">National Emergency Number</h3>
-            <p class="text-[16px] text-[#5C5C5C]">National Emergency</p>
+            <h3 class="Heading font-bold text-[18px]">National Emergency Number</h3>
+            <p class="  text-[16px] text-[#5C5C5C]">National Emergency</p>
             <div class="mt-3">
-                <p class="font-bold text-[27px]">999</p>
+                <p class=" call-service font-bold text-[27px]">999</p>
                 <p class="flex items-center justify-center text-[#5C5C5C] text-[12px] bg-[#F2F2F2] h-[20px] w-[35px] rounded-[10px] text-center ">All</span>
             </div>
             <div class="flex justify-between mt-4">
-            <button class="flex items-center justify-center gap-2 border rounded-lg h-[30px] w-[150px]">
+            <button class="flex items-center justify-center gap-2 border rounded-lg h-[30px] w-[150px] cursor-pointer">
             <i class="fa-solid fa-copy"></i> Copy
              </button>
-            <button class="callBtn flex items-center justify-center gap-2 border rounded-lg h-[30px] w-[150px] bg-[#00A63E] text-white">
+            <button class="callBtn flex items-center justify-center gap-2 border rounded-lg h-[30px] w-[150px] bg-[#00A63E] text-white cursor-pointer">
             <i class="fa-solid fa-phone"></i> Call
             </button>
 
@@ -72,7 +72,7 @@
         </div>
      </div>
      <!-- Card 2 -->
-       <div class=" h-[280px] w-[350px] rounded-[10px] mt-[40px] p-5 bg-white shadow-lg  data-name="Fire Service Number" data-number="999"">
+       <div class=" h-[280px] w-[350px] rounded-[10px] mt-[40px] p-5 bg-white shadow-lg"  data-name="Fire Service Number" data-number="999">
         <div class=" flex justify-between">
             <div class="bg-[#FFE3E2] rounded-[15px] h-[45px] w-[50px] flex items-center justify-center"><img src="assets/police.png" class="h-[24px] w-[24px] "></div>
             <span class="text-[25px] mt-2 heart cursor-pointer">&#9825;</span>
@@ -85,10 +85,10 @@
                 <p class="flex items-center justify-center text-[#5C5C5C] text-[12px] bg-[#F2F2F2] h-[20px] w-[45px] rounded-[10px] text-center ">Police</span>
             </div>
             <div class="flex justify-between mt-4">
-            <button class="flex items-center justify-center gap-2 border rounded-lg h-[30px] w-[150px]">
+            <button class="flex items-center justify-center gap-2 border rounded-lg h-[30px] w-[150px] cursor-pointer">
             <i class="fa-solid fa-copy"></i> Copy
             </button>
-            <button class="flex items-center justify-center gap-2 border rounded-lg h-[30px] w-[150px] bg-[#00A63E] text-white">
+            <button class="flex items-center justify-center gap-2 border rounded-lg h-[30px] w-[150px] bg-[#00A63E] text-white cursor-pointer">
             <i class="fa-solid fa-phone"></i>Call
             </button>
         </div>
@@ -98,7 +98,7 @@
        <div class=" h-[280px] w-[350px] rounded-[10px] mt-[40px] p-5 bg-white shadow-lg">
         <div class=" flex justify-between">
             <div class="bg-[#FFE3E2] rounded-[15px] h-[45px] w-[50px] flex items-center justify-center"><img src="assets/fire-service.png" class="h-[24px] w-[24px] "></div>
-            <span class="text-[25px] mt-2">&#9825;</span>
+            <span class="text-[25px] mt-2 heart cursor-pointer">&#9825;</span>
         </div>
         <div class="mt-3">
             <h3 class="font-bold text-[18px]">Fire Service Number</h3>
@@ -108,10 +108,10 @@
                 <p class="flex items-center justify-center text-[#5C5C5C] text-[12px] bg-[#F2F2F2] h-[20px] w-[35px] rounded-[10px] text-center ">Fire</span>
             </div>
             <div class="flex justify-between mt-4">
-             <button class="flex items-center justify-center gap-2 border rounded-lg h-[30px] w-[150px]">
+             <button class="flex items-center justify-center gap-2 border rounded-lg h-[30px] w-[150px] cursor-pointer">
              <i class="fa-solid fa-copy"></i> Copy
              </button>
-             <button class="flex items-center justify-center gap-2 border rounded-lg h-[30px] w-[150px] bg-[#00A63E] text-white">
+             <button class="flex items-center justify-center gap-2 border rounded-lg h-[30px] w-[150px] bg-[#00A63E] text-white cursor-pointer">
             <i class="fa-solid fa-phone"></i>Call
              </button>
             </div>
@@ -121,7 +121,7 @@
        <div class=" h-[280px] w-[350px] rounded-[10px] mt-[20px] p-5 bg-white shadow-lg">
         <div class=" flex justify-between">
             <div class="bg-[#FFE3E2] rounded-[15px] h-[45px] w-[50px] flex items-center justify-center"><img src="assets/ambulance.png" class="h-[24px] w-[24px] "></div>
-            <span class="text-[25px] mt-2">&#9825;</span>
+            <span class="text-[25px] mt-2 heart cursor-pointer">&#9825;</span>
         </div>
         <div class="mt-3">
             <h3 class="font-bold text-[18px]">Ambulance Service</h3>
@@ -131,10 +131,10 @@
                 <p class="flex items-center justify-center text-[#5C5C5C] text-[12px] bg-[#F2F2F2] h-[20px] w-[50px] rounded-[10px] text-center ">Health</span>
             </div>
             <div class="flex justify-between mt-4">
-             <button class="flex items-center justify-center gap-2 border rounded-lg h-[30px] w-[150px]">
+             <button class="flex items-center justify-center gap-2 border rounded-lg h-[30px] w-[150px] cursor-pointer">
              <i class="fa-solid fa-copy"></i> Copy
              </button>
-             <button class="flex items-center justify-center gap-2 border rounded-lg h-[30px] w-[150px] bg-[#00A63E] text-white">
+             <button class="flex items-center justify-center gap-2 border rounded-lg h-[30px] w-[150px] bg-[#00A63E] text-white cursor-pointer">
             <i class="fa-solid fa-phone"></i>Call
             </button>
 
@@ -146,7 +146,7 @@
        <div class=" h-[280px] w-[350px] rounded-[10px] mt-[20px] p-5 bg-white shadow-lg">
         <div class=" flex justify-between">
             <div class="bg-[#FFE3E2] rounded-[15px] h-[45px] w-[50px] flex items-center justify-center"><img src="assets/emergency.png" class="h-[24px] w-[24px] "></div>
-            <span class="text-[25px] mt-2">&#9825;</span>
+            <span class="text-[25px] mt-2 heart cursor-pointer">&#9825;</span>
         </div>
         <div class="mt-3">
             <h3 class="font-bold text-[18px]">Women & Child Helpline</h3>
@@ -156,10 +156,10 @@
                 <p class="flex items-center justify-center text-[#5C5C5C] text-[12px] bg-[#F2F2F2] h-[20px] w-[35px] rounded-[10px] text-center ">Help</span>
             </div>
             <div class="flex justify-between mt-4">
-            <button class="flex items-center justify-center gap-2 border rounded-lg h-[30px] w-[150px]">
+            <button class="flex items-center justify-center gap-2 border rounded-lg h-[30px] w-[150px] cursor-pointer">
              <i class="fa-solid fa-copy"></i> Copy
              </button>
-             <button class="flex items-center justify-center gap-2 border rounded-lg h-[30px] w-[150px] bg-[#00A63E] text-white">
+             <button class="flex items-center justify-center gap-2 border rounded-lg h-[30px] w-[150px] bg-[#00A63E] text-white cursor-pointer">
             <i class="fa-solid fa-phone"></i> Call
             </button>
             </div>
@@ -169,7 +169,7 @@
        <div class=" h-[280px] w-[350px] rounded-[10px] mt-[20px] p-5 bg-white shadow-lg">
         <div class=" flex justify-between">
             <div class="bg-[#FFE3E2] rounded-[15px] h-[45px] w-[50px] flex items-center justify-center"><img src="assets/emergency.png" class="h-[24px] w-[24px] "></div>
-            <span class="text-[25px] mt-2">&#9825;</span>
+            <span class="text-[25px] mt-2 heart cursor-pointer">&#9825;</span>
         </div>
         <div class="mt-3">
             <h3 class="font-bold text-[18px]">Anti-Corruption Helpline</h3>
@@ -179,86 +179,86 @@
                 <p class="flex items-center justify-center text-[#5C5C5C] text-[12px] bg-[#F2F2F2] h-[20px] w-[40px] rounded-[10px] text-center ">govt.</span>
             </div>
             <div class="flex justify-between mt-4">
-              <button class="flex items-center justify-center gap-2 border rounded-lg h-[30px] w-[150px]">
+              <button class="flex items-center justify-center gap-2 border rounded-lg h-[30px] w-[150px] cursor-pointer">
              <i class="fa-solid fa-copy"></i> Copy
              </button>
-             <button class="flex items-center justify-center gap-2 border rounded-lg h-[30px] w-[150px] bg-[#00A63E] text-white">
+             <button class="flex items-center justify-center gap-2 border rounded-lg h-[30px] w-[150px] bg-[#00A63E] text-white cursor-pointer">
             <i class="fa-solid fa-phone"></i> Call
             </button>
             </div>
         </div>
      </div>
+
+     
      
         </div>
         <!-- Right side -->
-         <div class="bg-white rounded-lg shadow-lg p-5 h-full mt-[40px]">
+         <div class="bg-white rounded-lg shadow-lg p-5 mt-[40px]">
             <div class="flex justify-between items-center mb-4">
                 <div class="flex justify-between items-center gap-20">
-                    <span class="text-[20px]"><i class="fa-regular fa-clock"></i> Call History</span></div>
-                    <button id="clearHistory"class="bg-[#00A63E] h-[60px] w-[130px] rounded-[50px] text-white text-[18px]">Clear</button>
+                    <span class="text-[20px]"><i class="fa-regular fa-clock"></i>  Call History</span></div>
+                    <button id="clearhistory"class="bg-[#00A63E] h-[60px] w-[130px] rounded-[50px] text-white text-[18px]">Clear</button>
                 
             </div>
-            <div id="historyList" class="space-y-3 gap-3">
+            <div id="historylist" class="space-y-3 gap-3">
             </div>
          </div>
          </div>
         
     </div>
-     <script>
-     
-document.addEventListener("DOMContentLoaded", () => {
-  // Coins
-  let coins = 100;
-  const coinDisplay = document.getElementById("coinCount");
 
-  // Heart count
-  let heartCount = 0;
-  const heartDisplay = document.getElementById("heartCount");
-  document.querySelectorAll(".heart").forEach(heart => {
-    heart.addEventListener("click", () => {
-      heartCount++;
-      heartDisplay.textContent = heartCount;
-    });
-  });
+    <!-- JAVASCRIPT DOM -->
+    <script>
+     document.addEventListener("DOMContentLoaded", function() {
+    // Coins Related 
+     let heartCount=0;
+     const display=document.getElementById("heartCount");
+     document.querySelectorAll(".heart").forEach(function(heart){
+     heart.addEventListener("click",function()
+    {
+        heartCount++;
+        display.innerText=heartCount;
+        heart.classList.toggle("fas"); 
+        heart.style.color = "red";
+
+    })
+    })
 
   // Call History elements
-  const historyList = document.querySelector("#historyList"); // make sure your history container has id="historyList"
-  const clearBtn = document.querySelector("#clearHistory"); // make sure your clear button has id="clearHistory"
-
-  // Call button functionality
-  document.querySelectorAll(".card").forEach(card => {
-    const callBtn = card.querySelector(".callBtn");
-    if (!callBtn) return; // skip cards without callBtn
-    const serviceName = card.querySelector("h3").textContent;
-    const serviceNumber = card.querySelector("p.font-bold").textContent;
-
-    callBtn.addEventListener("click", () => {
-      if (coins < 20) {
-        alert("Oops! Not enough coins 😅");
+    let coins=100;
+    const coindisplay=document.getElementById("coinCount");
+    document.querySelectorAll(".card").forEach(function(card){
+        const callBtn=card.querySelector(".callBtn");
+        if(!callBtn)
         return;
-      }
+    const s_Name=card.querySelector("h3").innerText;
+    const s_number=card.querySelector(".call-service").innerText;
+    callBtn.addEventListener("click",function(){
+        if(coins<20){
+            alert("OOPS! You Don't Have Enough Coins");
+            return;
+        }
+        coins-=20;
+        coindisplay.innerText=coins;
+        alert(`📞 Calling ${s_Name} (${s_number})...Kindly Wait!`);
 
-      coins -= 20;
-      coinDisplay.textContent = coins;
-
-      alert(`📞 Calling ${serviceName} (${serviceNumber})...`);
-
-      // Add to Call History
-      const now = new Date();
-      const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
-
-      const historyItem = document.createElement("div");
-      historyItem.className = "bg-gray-100 rounded-lg p-3 flex justify-between items-center shadow-sm";
-      historyItem.innerHTML = `
+        const date=new Date();
+        const time=date.toLocaleTimeString([],{hour:'2-digit',minute:'2-digit',second:'2-digit'});
+        const historyList = document.querySelector("#historylist"); 
+        const btn_clear = document.querySelector("#clearhistory");
+        const history=document.createElement("div");
+        history.className ="bg-gray-100 rounded p-3 flex justify-between items-center shadow";
+        history.innerHTML=`
         <div>
-          <h3 class="font-bold">${serviceName}</h3>
-          <p>${serviceNumber}</p>
+            <h3 class=".Heading">${s_Name}</h3>
+            <p>${s_number}</p>
         </div>
-        <p class="text-gray-600">${timeString}</p>
-      `;
-      historyList.prepend(historyItem); // newest call at top
-    });
-  });
+        <p class="text-gray-600">${time}</p>
+        `;
+        historyList.append(history);
+
+    })
+    })
 
   // Clear history
   clearBtn.addEventListener("click", () => {
